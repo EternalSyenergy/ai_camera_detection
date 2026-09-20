@@ -1,60 +1,356 @@
-.layout{
-    min-height:100vh;
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.layout {
+  min-height: 100vh;
+
+  background: #eef1f5 !important;
 }
 
-/* Fix the Sider to the left viewport */
-.layout :global(.ant-layout-sider) {
-  overflow: auto;
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sider {
   height: 100vh;
+
   position: sticky;
+
   top: 0;
   left: 0;
+
   z-index: 100;
+
+  overflow: auto;
+
+  background: #101828 !important;
+
+  box-shadow:
+    2px 0 12px rgba(15, 23, 42, 0.08);
 }
 
-.logo{
+/* =========================================================
+   LOGO
+========================================================= */
 
-    height:64px;
+.logo {
+  height: 70px;
 
-    color:white;
+  display: flex;
 
-    display:flex;
+  align-items: center;
 
-    align-items:center;
+  gap: 11px;
 
-    justify-content:center;
+  padding: 0 20px;
 
-    font-size:22px;
+  background: #101828;
 
-    font-weight:bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    background:#001529;
+  box-sizing: border-box;
 }
 
-.header{
+.logoIcon {
+  width: 36px;
+  height: 36px;
 
-    background:white;
+  display: flex;
 
-    display:flex;
+  align-items: center;
+  justify-content: center;
 
-    justify-content:space-between;
+  flex-shrink: 0;
 
-    align-items:center;
+  border-radius: 9px;
 
-    padding:0 30px;
+  background: #1677ff;
 
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+  color: #ffffff;
+
+  font-size: 17px;
 }
 
-.content{
+.logoText {
+  color: #ffffff;
 
-    margin:24px;
+  font-size: 20px;
 
-    padding:24px;
+  font-weight: 700;
 
-    background:white;
+  letter-spacing: 0.2px;
+}
 
-    border-radius:12px;
+/* =========================================================
+   SIDEBAR MENU
+========================================================= */
 
-    min-height:calc(100vh - 110px);
+.menu {
+  margin-top: 14px;
+
+  padding: 0 10px;
+
+  background: transparent !important;
+
+  border-inline-end: none !important;
+}
+
+.menu :global(.ant-menu-item) {
+  height: 46px;
+
+  line-height: 46px;
+
+  margin: 4px 0 !important;
+
+  border-radius: 9px;
+
+  color: #b8c1ce;
+
+  font-size: 14px;
+}
+
+.menu :global(.ant-menu-item .anticon) {
+  font-size: 17px;
+}
+
+.menu :global(.ant-menu-item:hover) {
+  background: rgba(255, 255, 255, 0.06) !important;
+
+  color: #ffffff !important;
+}
+
+.menu :global(.ant-menu-item-selected) {
+  background: #1677ff !important;
+
+  color: #ffffff !important;
+}
+
+.menu :global(.ant-menu-item-selected::after) {
+  display: none;
+}
+
+.menu :global(.ant-menu-item a) {
+  color: inherit !important;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.mainLayout {
+  min-height: 100vh;
+
+  background: #eef1f5 !important;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  height: 70px;
+
+  padding: 0 26px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #ffffff !important;
+
+  border-bottom: 1px solid #e5e9ef;
+
+  box-shadow:
+    0 2px 10px rgba(15, 23, 42, 0.04);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 90;
+
+  line-height: normal;
+}
+
+/* =========================================================
+   HEADER TITLE
+========================================================= */
+
+.headerTitle {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.headerTitleMain {
+  color: #172033;
+
+  font-size: 17px;
+
+  font-weight: 650;
+
+  line-height: 1.3;
+}
+
+.headerSubtitle {
+  margin-top: 2px;
+
+  color: #8a94a4;
+
+  font-size: 11px;
+
+  line-height: 1.3;
+}
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.profile {
+  min-height: 44px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 3px 8px 3px 4px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.profile:hover {
+  background: #f5f7fa;
+}
+
+.avatar {
+  background: #eaf3ff !important;
+
+  color: #1677ff !important;
+
+  border: 1px solid #dceaff;
+}
+
+.profileText {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.profileName {
+  color: #344054;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.profileRole {
+  color: #98a2b3;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+  min-height: calc(100vh - 70px);
+
+  padding: 0 !important;
+
+  background: #eef1f5 !important;
+
+  box-sizing: border-box;
+}
+
+.contentInner {
+  width: 100%;
+
+  min-height: calc(100vh - 70px);
+
+  padding: 0;
+
+  background: #eef1f5;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   IMPORTANT ANT DESIGN OVERRIDES
+========================================================= */
+
+.layout :global(.ant-layout) {
+  background: #eef1f5 !important;
+}
+
+.layout :global(.ant-layout-content) {
+  background: #eef1f5 !important;
+}
+
+.layout :global(.ant-layout-sider-children) {
+  background: #101828 !important;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .header {
+    height: 64px;
+
+    padding: 0 16px;
+  }
+
+  .content {
+    min-height: calc(100vh - 64px);
+  }
+
+  .contentInner {
+    min-height: calc(100vh - 64px);
+  }
+
+  .profileText {
+    display: none;
+  }
+
+  .headerTitleMain {
+    font-size: 15px;
+  }
+
+  .headerSubtitle {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 12px;
+  }
+
+  .headerTitleMain {
+    font-size: 14px;
+  }
+
+  .headerSubtitle {
+    display: none;
+  }
 }

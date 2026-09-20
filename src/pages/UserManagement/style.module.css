@@ -1,12 +1,418 @@
-.container{
-    display:flex;
-    flex-direction:column;
-    gap:24px;
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page {
+  width: 100%;
+  min-height: 100%;
+
+  padding: 28px 32px 40px;
+
+  box-sizing: border-box;
+
+  background: #f4f5f7;
 }
 
-.header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:24px;
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-bottom: 28px;
+}
+
+.headerInfo {
+  min-width: 0;
+}
+
+.title {
+  margin: 0 !important;
+
+  color: #20252b !important;
+
+  font-size: 24px !important;
+  font-weight: 650 !important;
+
+  line-height: 1.25 !important;
+}
+
+.subtitle {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #747b84;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   HEADER BUTTONS
+========================================================= */
+
+.resetButton {
+  height: 40px;
+
+  padding: 0 16px;
+
+  border: 1px solid #d8dce1 !important;
+
+  border-radius: 7px !important;
+
+  background: #ffffff !important;
+
+  color: #4f5660 !important;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.resetButton:hover {
+  border-color: #bfc5cc !important;
+
+  color: #20252b !important;
+
+  background: #ffffff !important;
+}
+
+.addButton {
+  height: 40px;
+
+  padding: 0 18px;
+
+  border-radius: 7px !important;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.statsSection {
+  width: 100%;
+
+  margin-bottom: 24px;
+}
+
+.sectionLabel {
+  margin-bottom: 10px;
+
+  color: #3f464f;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+
+/*
+   White background around KPI component
+*/
+
+.statsGrid {
+  width: 100%;
+
+  padding: 18px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e4e8;
+
+  border-radius: 9px;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.025);
+}
+
+
+/* =========================================================
+   COMMON PANEL
+========================================================= */
+
+.panel {
+  width: 100%;
+
+  margin-bottom: 24px;
+
+  background: #ffffff !important;
+
+  border: 1px solid #e0e3e7 !important;
+
+  border-radius: 9px !important;
+
+  overflow: hidden;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.025);
+}
+
+.usersPanel {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.panelHeader {
+  min-height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 20px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e9ebee;
+}
+
+.panelTitle {
+  color: #30363d;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+.panelSubtitle {
+  margin-top: 3px;
+
+  color: #8a9098;
+
+  font-size: 12.5px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   CLEAR FILTERS
+========================================================= */
+
+.clearButton {
+  height: 34px;
+
+  padding: 0 9px;
+
+  border-radius: 6px !important;
+
+  color: #6b727b !important;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+.clearButton:hover {
+  background: #f5f6f7 !important;
+
+  color: #30363d !important;
+}
+
+
+/* =========================================================
+   FILTER AREA
+========================================================= */
+
+.filterArea {
+  padding: 20px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLE AREA
+========================================================= */
+
+.tableArea {
+  width: 100%;
+
+  background: #ffffff;
+
+  overflow-x: auto;
+}
+
+
+/* =========================================================
+   ANT DESIGN CARD
+========================================================= */
+
+.panel :global(.ant-card-body) {
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.tableArea :global(.ant-table-wrapper) {
+  width: 100%;
+}
+
+.tableArea :global(.ant-table) {
+  background: #ffffff;
+}
+
+.tableArea :global(.ant-table-container) {
+  border-radius: 0 !important;
+}
+
+.tableArea :global(.ant-table-thead > tr > th) {
+  height: 46px;
+
+  padding: 12px 16px;
+
+  background: #f8f9fa !important;
+
+  color: #606770 !important;
+
+  font-size: 12.5px;
+
+  font-weight: 600;
+
+  border-bottom: 1px solid #e2e5e8 !important;
+}
+
+.tableArea :global(.ant-table-tbody > tr > td) {
+  padding: 13px 16px;
+
+  color: #444b53;
+
+  font-size: 13.5px;
+
+  border-bottom: 1px solid #edf0f2 !important;
+}
+
+.tableArea :global(.ant-table-tbody > tr:hover > td) {
+  background: #fafbfc !important;
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.tableArea :global(.ant-pagination) {
+  margin: 16px 20px !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .page {
+    padding: 22px 20px 32px;
+  }
+
+  .header {
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .page {
+    padding: 18px 14px 28px;
+  }
+
+  .header {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    margin-bottom: 22px;
+  }
+
+  .headerActions {
+    width: 100%;
+  }
+
+  .resetButton,
+  .addButton {
+    flex: 1;
+  }
+
+  .statsGrid {
+    padding: 14px;
+  }
+
+  .panelHeader {
+    padding: 14px 16px;
+  }
+
+  .filterArea {
+    padding: 16px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .page {
+    padding: 16px 12px 24px;
+  }
+
+  .title {
+    font-size: 21px !important;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .sectionLabel {
+    font-size: 14px;
+  }
+
+  .panelSubtitle {
+    font-size: 12px;
+  }
+
+  .clearButton {
+    font-size: 12px;
+  }
+
 }
