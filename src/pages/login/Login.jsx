@@ -119,9 +119,9 @@ function Login() {
                             <Checkbox name="rememberMe">
                                 Remember me
                             </Checkbox>
-
+{/* /forgot-password */}
                             <Link
-                                to="/forgot-password"
+                                to=""
                                 className={styles.forgotLink}
                             >
                                 Forgot password?
