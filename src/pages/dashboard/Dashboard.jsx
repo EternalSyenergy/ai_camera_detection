@@ -761,7 +761,8 @@ const KpiCard = ({
         height: "100%",
         borderRadius: 18,
         background: "#fff",
-        border: "1px solid #e2e7ee",
+                   border: "1px solid #d1d5da",
+
         boxShadow: "0 8px 25px rgba(31,41,55,.065)",
         overflow: "hidden",
         position: "relative",
@@ -2323,6 +2324,7 @@ function Dashboard() {
         minHeight: "100vh",
         padding: isSmall ? 12 : isMobile ? 16 : 28,
         background: "#f5f7fa",
+        border: "1px solid #d1d5da",
       }}
     >
       {/* ====================================================
@@ -2337,6 +2339,7 @@ function Dashboard() {
           gap: 16,
           marginBottom: 24,
           flexWrap: "wrap",
+           
         }}
       >
         <div>
@@ -2480,6 +2483,7 @@ function Dashboard() {
         gutter={[18, 18]}
         style={{
           marginTop: 18,
+
         }}
       >
         <Col xs={24} xl={16}>
@@ -2489,9 +2493,11 @@ function Dashboard() {
               height: "100%",
               borderRadius: 20,
               background: "#fff",
-              border: "1px solid #e1e7ef",
+   
               boxShadow: "0 10px 30px rgba(31,41,55,.07)",
               overflow: "hidden",
+             border: "1px solid #d1d5da",
+
             }}
             styles={{
               body: {
@@ -2632,7 +2638,8 @@ function Dashboard() {
               height: "100%",
               borderRadius: 20,
               background: "#fff",
-              border: "1px solid #e5ddf5",
+                          border: "1px solid #d1d5da",
+
               boxShadow: "0 10px 30px rgba(31,41,55,.07)",
               overflow: "hidden",
             }}
@@ -2711,7 +2718,8 @@ function Dashboard() {
           marginTop: 18,
           borderRadius: 20,
           background: "#ffffff",
-          border: "1px solid #e1e7ef",
+         border: "1px solid #d1d5da",
+
           boxShadow: "0 10px 30px rgba(31,41,55,.065)",
           overflow: "hidden",
         }}
@@ -2738,6 +2746,7 @@ function Dashboard() {
               onClick={downloadReportsPdf}
               style={{
                 borderRadius: 8,
+                height: 32,
               }}
             >
               {!isSmall && "Download Full PDF"}
@@ -2885,6 +2894,8 @@ function Dashboard() {
               onClick={downloadReportsPdf}
               style={{
                 borderRadius: 8,
+                  height: 32,
+                  marginRight: 30,
               }}
             >
               Download Full PDF

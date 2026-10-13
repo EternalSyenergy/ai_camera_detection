@@ -1,43 +1,436 @@
-.container{
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f3f6fb;
+}
+
+/* LEFT PANEL */
+
+.leftSide {
+    position: relative;
+    min-width: 0;
+    min-height: calc(100vh - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 24px;
+
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(10, 31, 68, 0.82),
+            rgba(37, 99, 235, 0.45)
+        ),
+        url("../../assets/ic_dashboard_cover.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    width: 100%;
+    min-height: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    text-align: center;
+}
+
+.welcomeContent {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logoIcon {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+
+    backdrop-filter: blur(8px);
+}
+
+.welcomeTitle {
+    margin: 0 0 16px !important;
+    color: #ffffff !important;
+    font-size: clamp(30px, 3vw, 46px) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+.welcomeDescription {
+    color: #e5edff !important;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.welcomeSubtext {
+    max-width: 390px;
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* RIGHT PANEL */
+
+.rightSide {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 100%;
+    max-width: 440px;
+    padding: 40px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 1px solid #d4d9e3;
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.07),
+        0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.formHeader {
+    margin-bottom: 30px;
+}
+
+.loginTitle {
+    margin: 0 0 10px !important;
+    color: #172033 !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+}
+
+.loginSubtitle {
+    color: #667085 !important;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* FORM */
+
+.loginForm {
+    width: 100%;
+}
+
+.loginForm :global(.ant-form-item) {
+    margin-bottom: 22px;
+}
+
+.loginForm :global(.ant-form-item-label > label) {
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.loginForm :global(.ant-input-affix-wrapper) {
+    min-height: 48px;
+    padding: 10px 13px;
+    border: 1px solid #dce3ed;
+    border-radius: 10px;
+    box-shadow: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.loginForm :global(.ant-input) {
+    font-size: 14px;
+}
+
+.loginForm :global(.ant-input-affix-wrapper:hover) {
+    border-color: #7aa7ff;
+}
+
+.loginForm :global(.ant-input-affix-wrapper-focused) {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.loginForm :global(.ant-input-prefix) {
+    margin-right: 10px;
+    color: #98a2b3;
+}
+
+/* REMEMBER ME + FORGOT PASSWORD */
+
+.optionRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 2px 0 26px;
+}
+
+.optionRow :global(.ant-checkbox-wrapper) {
+    color: #475467;
+    font-size: 13px;
+}
+
+.forgotLink {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.forgotLink:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* LOGIN BUTTON */
+
+.submitButton {
+    width: 100%;
+}
+
+.submitButton :global(button),
+.submitButton :global(.ant-btn) {
+    width: 100%;
+    min-height: 48px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* SECURITY FOOTER */
+
+.securityNote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid #edf0f5;
+}
+
+.securityNote > :global(.anticon) {
+    color: #16a34a;
+    font-size: 14px;
+}
+
+.securityNote :global(.ant-typography) {
+    color: #667085;
+    font-size: 12px;
+}
+
+.footerText {
+    margin-top: 22px;
+    color: #98a2b3 !important;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .leftSide {
+        min-height: 260px;
+        border-radius: 20px;
+    }
+
+    .overlay {
+        padding: 30px;
+    }
+
+    .logoIcon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 18px;
+        border-radius: 16px;
+        font-size: 24px;
+    }
+
+    .welcomeTitle {
+        font-size: 32px !important;
+    }
+
+    .welcomeSubtext {
+        margin-top: 12px;
+    }
+
+    .rightSide {
+        padding: 10px 0;
+    }
+
+    .card {
+        max-width: 500px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .leftSide {
+        min-height: 190px;
+        border-radius: 16px;
+    }
+
+    .overlay {
+        padding: 20px;
+    }
+
+    .logoIcon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 12px;
+        border-radius: 12px;
+        font-size: 20px;
+    }
+
+    .welcomeTitle {
+        margin-bottom: 8px !important;
+        font-size: 26px !important;
+    }
+
+    .welcomeDescription {
+        font-size: 14px;
+    }
+
+    .welcomeSubtext {
+        max-width: 300px;
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .rightSide {
+        padding: 8px 0;
+    }
+
+    .card {
+        padding: 28px 20px;
+        border-radius: 16px;
+    }
+
+    .loginTitle {
+        font-size: 26px !important;
+    }
+
+    .formHeader {
+        margin-bottom: 24px;
+    }
+
+    .optionRow {
+        align-items: flex-start;
+    }
+
+    .footerText {
+        margin-top: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* .container{
     display:flex;
     min-height:100vh;
 }
 
-.leftSide{
-    flex:1;
-    background:linear-gradient(135deg,#1677ff,#4f46e5);
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.leftSide {
+    flex: 1;
+    background: linear-gradient(135deg, #1677ff, #4f46e5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     border-radius: 20px; 
 }
 
-.overlay{
-    color:white;
-    text-align:center;
-    padding:40px;
+.overlay {
+    width: 98%;
+    height: 98%;
+    padding: 40px;
+    box-sizing: border-box;
+
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    border-radius: 20px;
+    overflow: hidden;
+    margin: auto;
 }
 
-.rightSide{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#f5f7fb;
-    padding:30px;
+.rightSide {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8fafc;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
-.card{
+.card {
+    width: 100%;
+    max-width: 430px;
+    padding: 32px;
+    margin: 0 auto;
+    box-sizing: border-box;
 
-    width:100%;
-    max-width:430px;
+    background: #ffffff;
+    border: 2px solid #dfe5ec;
+    border-radius: 16px;
 
-    background:white;
-
-    padding:40px;
-
-    border-radius:16px;
-
-    box-shadow:0 10px 40px rgba(0,0,0,.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
 }
 
 .optionRow{
@@ -70,6 +463,8 @@
     .card{
 
         padding:30px;
+
+  
     }
 
 }
@@ -90,4 +485,4 @@
         gap:10px;
     }
 
-}
+} */

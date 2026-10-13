@@ -1602,7 +1602,7 @@ function CameraManagement() {
           marginBottom: 22,
           borderRadius: 16,
           background: "#ffffff",
-          border: "1px solid #e5e9ef",
+         border: "1px solid #d2d6dc",
           boxShadow:
             "0 4px 16px rgba(15, 23, 42, 0.05)",
         }}
@@ -1792,8 +1792,7 @@ function CameraManagement() {
               height: "100%",
               borderRadius: 14,
               background: "#ffffff",
-              border:
-                "1px solid #e5e9ef",
+               border: "1px solid #d2d6dc",
               boxShadow:
                 "0 3px 12px rgba(15, 23, 42, 0.04)",
             }}
@@ -1879,8 +1878,7 @@ function CameraManagement() {
               height: "100%",
               borderRadius: 14,
               background: "#ffffff",
-              border:
-                "1px solid #e5e9ef",
+             border: "1px solid #d2d6dc",
               boxShadow:
                 "0 3px 12px rgba(15, 23, 42, 0.04)",
             }}
@@ -1966,8 +1964,7 @@ function CameraManagement() {
               height: "100%",
               borderRadius: 14,
               background: "#ffffff",
-              border:
-                "1px solid #e5e9ef",
+               border: "1px solid #d2d6dc",
               boxShadow:
                 "0 3px 12px rgba(15, 23, 42, 0.04)",
             }}
@@ -2053,8 +2050,7 @@ function CameraManagement() {
               height: "100%",
               borderRadius: 14,
               background: "#ffffff",
-              border:
-                "1px solid #e5e9ef",
+            border: "1px solid #d2d6dc",
               boxShadow:
                 "0 3px 12px rgba(15, 23, 42, 0.04)",
             }}
@@ -2138,8 +2134,7 @@ function CameraManagement() {
         style={{
           borderRadius: 16,
           background: "#ffffff",
-          border:
-            "1px solid #e3e8ef",
+          border: "1px solid #d2d6dc",
           boxShadow:
             "0 4px 16px rgba(15, 23, 42, 0.05)",
           overflow: "hidden",

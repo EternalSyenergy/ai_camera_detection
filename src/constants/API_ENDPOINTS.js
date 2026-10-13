@@ -10,13 +10,15 @@ const API_ENDPOINTS = {
     CHANGE_PASSWORD: "/auth/change-password",
   },
 
-  USER: {
-    LIST: "/users",
-    CREATE: "/users",
-    UPDATE: "/users",
-    DELETE: "/users",
-    PROFILE: "/users/profile",
-  },
+    USER: {
+        LIST: "/users",
+        CREATE: "/users",
+        BY_ID: "/users",
+        UPDATE: "/users",
+        STATUS: "/users",
+        DELETE: "/users",
+        PROFILE: "/users/profile",
+    },
 
   DEPARTMENT: {
     LIST: "/departments",
