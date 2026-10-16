@@ -276,6 +276,11 @@ const getImageData = async (imageUrl) => {
   }
 };
 
+
+
+
+
+
 /* ============================================================
    DETECT IMAGE FORMAT
 ============================================================ */
@@ -1574,7 +1579,8 @@ function Dashboard() {
 
             currentY += 15;
           }
-        } else {
+        } 
+        else {
           doc.setFontSize(9);
 
           doc.setFont("helvetica", "normal");
@@ -1585,6 +1591,10 @@ function Dashboard() {
 
           currentY += 15;
         }
+
+
+
+
       } else {
         doc.setFontSize(9);
 
@@ -1638,6 +1648,10 @@ function Dashboard() {
       setPdfLoading(false);
     }
   };
+
+
+
+
 
   /* ==========================================================
      FULL PDF
